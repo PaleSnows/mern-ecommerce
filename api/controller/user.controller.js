@@ -1,12 +1,12 @@
-import User from "../models/user.model";
-import { errorHandler } from "../utils/error";
+import User from "../models/user.model.js";
+import { errorHandler } from "../utils/error.js";
 import bcrypt from "bcryptjs";
 
 export const updateUser = async (req, res, next) => {
+  if (req.user.id !== req.params.id) {
+    return next(errorHandler(401, "You can oly update your own account!!"));
+  }
   try {
-    if (req.user.id !== req.params.id) {
-      return errorHandler(401, "Unauthorized");
-    }
     if (req.body.password) {
       req.body.password = bcrypt.hashSync(req.user.password, 10);
     }
