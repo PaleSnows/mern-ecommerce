@@ -1,5 +1,6 @@
 import React from "react";
 import hero from "../assets/hero_image.png";
+import exclusive from "../assets/exclusive_image.png";
 import { FaShoppingBag } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import data_product from "../assets/data.js";
@@ -25,7 +26,7 @@ const Home = () => {
         <img src={hero} alt="" />
       </div>
       {/* promotional section */}
-      <div className="pt-5 pl-3">
+      <div className="pt-5 px-3 ">
         <h1 className="text-center font-semibold text-2xl sm:text-5xl underline decoration-4    ">
           Popular in women
         </h1>
@@ -42,11 +43,21 @@ const Home = () => {
           ))}
         </div>
       </div>
-      {/* exclusive image */}
-      <div className="">
-
+      {/* exclusive image & offers */}
+      <div className="flex flex-col sm:flex-row justify-between pt-20   ">
+        <div className=" flex flex-col justify-center mx-auto gap-5 ">
+          <h1 className="capitalize font-semibold text-2xl sm:text-5xl">Exclusive</h1>
+          <h1 className="capitalize font-semibold text-2xl sm:text-5xl" >Offers for you</h1>
+          <p className="text-sm sm:text-xl">Only on best sellers product</p>
+          <button className="rounded-3xl w-40 sm:w-60 bg-black text-slate-200 p-4">
+            Check Now
+          </button>
+        </div>
+        <div className="mx-auto">
+          <img src={exclusive} alt="" />
+        </div>
       </div>
-      {/* special offers and discount */}
+      {/* new collection */}
       <div className=""></div>
       {/* newsletter */}
       <div className=""></div>
