@@ -12,10 +12,10 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/men" element={<Men />} />
-          <Route path="/women" element={<Women />} />
-          <Route path="/kids" element={<Kids />} />
+          <Route path="/"  element={<Home  />} />
+          <Route path="/men" element={<Men category ="men" />} />
+          <Route path="/women" element={<Women  category ="women" />} />
+          <Route path="/kids" element={<Kids  category ="kids"/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

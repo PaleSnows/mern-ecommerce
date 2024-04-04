@@ -1,8 +1,9 @@
 import React from 'react'
-
+import banner from '../assets/banner_mens.png'
 const Men = () => {
   return (
-    <div>Men</div>
+    <div>
+      <img src={banner} alt="" /></div>
   )
 }
 
