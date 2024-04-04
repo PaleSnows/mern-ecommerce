@@ -3,6 +3,12 @@ import all_product from "../assets/all_product";
 
 export const ShopContext = createContext(null); //1
 
+// const eg = (
+//   <div>
+//     <h1>hello</h1>
+//   </div>
+// );
+
 const ShopContextProvider = (props) => {
   const contextValue = { all_product };
   return (
@@ -12,4 +18,4 @@ const ShopContextProvider = (props) => {
   );
 };
 
-export default ShopContextProvider
+export default ShopContextProvider;

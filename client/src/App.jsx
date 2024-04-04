@@ -6,12 +6,14 @@ import kids_banner from "./assets/banner_kids.png";
 import men_banner from "./assets/banner_mens.png";
 import women_banner from "./assets/banner_women.png";
 import Category from "./pages/Category'";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Header />
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
@@ -24,8 +26,9 @@ function App() {
           />
           <Route
             path="/kids"
-            element={<Category banner={kids_banner} category="kids" />}
+            element={<Category banner={kids_banner} category="kid" />}
           />
+          <Route path="/login" element={<Login/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
