@@ -7,6 +7,7 @@ import men_banner from "./assets/banner_mens.png";
 import women_banner from "./assets/banner_women.png";
 import Category from "./pages/Category'";
 import Login from "./pages/Login";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             element={<Category banner={kids_banner} category="kid" />}
           />
           <Route path="/login" element={<Login/>}/>
+          <Route path="/product" element={<Product/>}>
+              <Route path=":productId" element={<Product/>}/>
+          </Route>
         </Routes>
         <Footer />
       </BrowserRouter>
